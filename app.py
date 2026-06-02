@@ -186,7 +186,7 @@ def make_profile_check_request(encrypted_profile_payload, server_name, token_dic
     elif server_name in {"BR", "US", "SAC", "NA"}:
         url = "https://client.us.freefiremobile.com/GetPlayerPersonalShow"
     else:
-        url = "https://clientbp.ggblueshark.com/GetPlayerPersonalShow"
+        url = "https://clientbp.ggpolarbear.com/GetPlayerPersonalShow"
 
     edata = bytes.fromhex(encrypted_profile_payload)
     headers = {
@@ -276,7 +276,7 @@ def handle_requests():
     elif server_name_param in {"BR", "US", "SAC", "NA"}:
         like_api_url = "https://client.us.freefiremobile.com/LikeProfile"
     else:
-        like_api_url = "https://clientbp.ggblueshark.com/LikeProfile"
+        like_api_url = "https://clientbp.ggpolarbear.com/LikeProfile"
 
     if tokens_for_like_sending:
         print(f"Using token batch for {server_name_param} (size {len(tokens_for_like_sending)}) to send likes.")
